@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haejun Bae | AI Researcher</title>
+    <meta
+      name="description"
+      content="Haejun Bae의 개인 소개와 주요 링크(LinkedIn, Google Scholar, Notion, GitHub)"
+    />
+    <style>
+      :root {
+        --bg: #f3f5f8;
+        --ink: #1d2430;
+        --muted: #5a6678;
+        --card: rgba(255, 255, 255, 0.78);
+        --line: rgba(26, 33, 45, 0.12);
+        --accent: #096b72;
+        --accent-2: #d85a3f;
+        --accent-3: #234d9c;
+        --radius-lg: 20px;
+        --radius-sm: 12px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Pretendard", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 12% 20%, rgba(9, 107, 114, 0.22), transparent 38%),
+          radial-gradient(circle at 85% 12%, rgba(216, 90, 63, 0.18), transparent 34%),
+          linear-gradient(160deg, #f9fafb 0%, #eef2f8 100%);
+        line-height: 1.5;
+      }
+
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      .hero {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        padding: 28px;
+        backdrop-filter: blur(5px);
+        animation: rise 0.7s ease-out both;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 8px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--accent);
+        background: rgba(9, 107, 114, 0.12);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        letter-spacing: -0.03em;
+      }
+
+      .sub {
+        margin: 12px 0 0;
+        color: var(--muted);
+        max-width: 68ch;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .links {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .card {
+        border-radius: var(--radius-sm);
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 16px;
+      }
+
+      .link-card {
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .link-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 26px rgba(29, 36, 48, 0.09);
+      }
+
+      .link-label {
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .link-head {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        line-height: 1;
+      }
+
+      .icon {
+        width: 17px;
+        height: 17px;
+        flex: 0 0 17px;
+        display: block;
+        color: var(--ink);
+        transform: translateY(-1px);
+      }
+
+      .link-head .link-label {
+        display: inline-flex;
+        align-items: center;
+        min-height: 17px;
+      }
+
+      .link-desc {
+        margin-top: 6px;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+
+      .section-title {
+        margin: 34px 0 8px;
+        font-size: 1.08rem;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+      }
+
+      .profile-info {
+        margin-top: 18px;
+      }
+
+      .info-grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .info-title {
+        margin: 0;
+        font-size: 0.92rem;
+        font-weight: 800;
+        letter-spacing: 0.01em;
+        color: #31435f;
+      }
+
+      .chip-row {
+        margin-top: 10px;
+        display: flex;
+        gap: 7px;
+        flex-wrap: wrap;
+      }
+
+      .soft-chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 9px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #29496f;
+        background: #eef4fd;
+        border: 1px solid #d4e0f3;
+      }
+
+      .chip-row.stack-row-1 .soft-chip {
+        color: #29496f;
+        background: #eef4fd;
+        border-color: #d4e0f3;
+      }
+
+      .chip-row.stack-row-2 .soft-chip {
+        color: #1f6156;
+        background: #eaf8f3;
+        border-color: #cdebdc;
+      }
+
+      .chip-row.stack-row-3 .soft-chip {
+        color: #7a4a1d;
+        background: #fff4e8;
+        border-color: #f1dcc4;
+      }
+
+      .projects {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+      .project h3 {
+        margin: 0;
+        font-size: 1.06rem;
+      }
+
+      .project {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .keywords {
+        margin-top: 10px;
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 9px;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #35527f;
+        background: #f2f6fd;
+        border: 1px solid #d8e2f2;
+      }
+
+      .project p {
+        margin: 8px 0 14px;
+        color: var(--muted);
+        font-size: 0.94rem;
+      }
+
+      .actions {
+        display: flex;
+        gap: 4px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: auto;
+        width: 100%;
+      }
+
+      .btn {
+        font-family: inherit;
+        -webkit-appearance: none;
+        appearance: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 calc((100% - 8px) / 3);
+        gap: 5px;
+        text-decoration: none;
+        font-size: 0.88rem;
+        font-weight: 650;
+        padding: 10px 10px;
+        min-height: 46px;
+        border-radius: 9px;
+        border: 1px solid transparent;
+        white-space: nowrap;
+        min-width: 0;
+        line-height: 1.1;
+      }
+
+      .btn svg {
+        width: 15px;
+        height: 15px;
+        flex-shrink: 0;
+      }
+
+      .btn.overview svg {
+        width: 15px;
+        height: 15px;
+      }
+
+      .btn.detail {
+        background: rgba(35, 77, 156, 0.1);
+        border-color: rgba(35, 77, 156, 0.2);
+        color: var(--accent-3);
+      }
+
+      .btn.overview {
+        background: rgba(216, 90, 63, 0.11);
+        border-color: rgba(216, 90, 63, 0.2);
+        color: #a14330;
+      }
+
+      .btn.code {
+        background: rgba(9, 107, 114, 0.1);
+        border-color: rgba(9, 107, 114, 0.2);
+        color: var(--accent);
+      }
+
+      footer {
+        margin-top: 24px;
+        color: var(--muted);
+        font-size: 0.87rem;
+      }
+
+      .contact-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .copy-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        border: 1px solid transparent;
+        background: transparent;
+        color: var(--ink);
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .copy-btn:hover {
+        background: rgba(29, 36, 48, 0.08);
+      }
+
+      .copy-btn svg {
+        width: 14px;
+        height: 14px;
+      }
+
+      .modal-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(17, 24, 39, 0.5);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 1000;
+      }
+
+      .modal-backdrop.open {
+        display: flex;
+      }
+
+      .modal-panel {
+        width: min(760px, 94vw);
+        max-height: 82vh;
+        overflow: auto;
+        border-radius: 16px;
+        border: 1px solid var(--line);
+        background: #fff;
+        box-shadow: 0 24px 48px rgba(15, 23, 42, 0.22);
+      }
+
+      .modal-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 18px 12px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .modal-title {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 800;
+      }
+
+      .modal-close {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #fff;
+        cursor: pointer;
+        color: var(--ink);
+      }
+
+      .modal-body {
+        padding: 14px 18px 18px;
+      }
+
+      .overview-image {
+        width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        border-radius: 10px;
+        border: 1px solid var(--line);
+        background: #f7f9fc;
+      }
+
+      .pub-list {
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        counter-reset: pub-item;
+      }
+
+      .pub-list li + li {
+        margin-top: 10px;
+      }
+
+      .pub-list li {
+        counter-increment: pub-item;
+      }
+
+      .pub-group + .pub-group {
+        margin-top: 16px;
+      }
+
+      .pub-group-title {
+        margin: 0 0 8px;
+        font-size: 0.92rem;
+        font-weight: 800;
+        color: #31435f;
+      }
+
+      .pub-list a {
+        color: #1f4ea5;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .pub-list a:hover {
+        text-decoration: underline;
+      }
+
+      .pub-item-title {
+        display: block;
+      }
+
+      .pub-item-title::before {
+        content: counter(pub-item) ". ";
+      }
+
+      .pub-item-meta {
+        display: inline;
+        font-style: italic;
+      }
+
+      .pub-item-detail {
+        display: block;
+        padding-left: 1.6em;
+      }
+
+      .pub-helper {
+        margin-top: 14px;
+        font-size: 0.86rem;
+        color: var(--muted);
+      }
+
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(8px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 980px) {
+        .links {
+          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+        }
+      }
+
+      @media (max-width: 520px) {
+        .actions {
+          gap: 4px;
+        }
+
+        .btn {
+          font-size: 0.76rem;
+          padding: 8px 6px;
+          gap: 4px;
+          min-height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow" id="profile-badge">AI RESEARCHER</span>
+        <h1 id="profile-name">Haejun Bae</h1>
+        <p class="sub" id="profile-intro"></p>
+        <div class="grid links" id="top-links"></div>
+      </section>
+
+      <h2 class="section-title">Focus & Capabilities</h2>
+      <section class="profile-info">
+        <div class="info-grid">
+          <article class="card">
+            <h3 class="info-title">Research Interests</h3>
+            <div class="chip-row" id="interest-list"></div>
+          </article>
+          <article class="card">
+            <h3 class="info-title">Tech Stack</h3>
+            <div id="tech-stack-list"></div>
+          </article>
+        </div>
+      </section>
+
+      <h2 class="section-title">Selected Projects</h2>
+      <section class="grid projects" id="project-list"></section>
+
+      <footer>
+        <div class="contact-row">
+          <span>Contact: <span id="email-text"></span></span>
+          <button class="copy-btn" id="copy-email-btn" type="button" aria-label="Copy email" title="Copy email">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M16 1H6a2 2 0 0 0-2 2v12h2V3h10zm3 4H10a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m0 16H10V7h9z"/>
+            </svg>
+          </button>
+        </div>
+      </footer>
+    </main>
+    <div class="modal-backdrop" id="scholar-modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="scholar-modal-title">
+        <div class="modal-header">
+          <h3 class="modal-title" id="scholar-modal-title">Publications</h3>
+          <button class="modal-close" type="button" id="scholar-modal-close" aria-label="Close publication popup">X</button>
+        </div>
+        <div class="modal-body" id="publication-list"></div>
+      </div>
+    </div>
+    <div class="modal-backdrop" id="overview-modal" aria-hidden="true">
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="overview-modal-title">
+        <div class="modal-header">
+          <h3 class="modal-title" id="overview-modal-title">Project Overview</h3>
+          <button class="modal-close" type="button" id="overview-modal-close" aria-label="Close overview popup">X</button>
+        </div>
+        <div class="modal-body">
+          <img class="overview-image" id="overview-modal-image" src="" alt="Project overview image" />
+        </div>
+      </div>
+    </div>
+    <script>
+      const iconMap = {
+        notion: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.6 4.5 15.8 3l3.6 2.5v14.1L8.3 21 4 18.2V6zm3.3 3v9.4l2.5-.3v-6.3l4 6 2.1-.3V6.7l-2.5.3v6l-4-5.4z"/></svg>',
+        linkedin: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.5H3.56V20h3.38zm.22-3.69a1.96 1.96 0 1 0-3.92 0 1.96 1.96 0 0 0 3.92 0M20 13.3c0-3.28-1.75-4.8-4.08-4.8a3.53 3.53 0 0 0-3.18 1.75h-.05v-1.5H9.44V20h3.38v-5.65c0-1.49.28-2.94 2.13-2.94 1.82 0 1.84 1.7 1.84 3.03V20h3.38z"/></svg>',
+        publications: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16.5a1 1 0 0 1-1 1H6.5A2.5 2.5 0 0 1 4 18zm14 0H6.5a1 1 0 0 0 0 2H18zm0 4H6.5a1 1 0 0 0 0 2H18zm0 4H6.5a1 1 0 0 0 0 2H18z"/></svg>',
+        github: '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.09 3.3 9.41 7.87 10.94.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.55-3.87-1.55-.52-1.33-1.27-1.69-1.27-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.3-5.25-1.28-5.25-5.72 0-1.26.45-2.29 1.18-3.1-.12-.3-.51-1.5.11-3.13 0 0 .97-.31 3.17 1.19a11 11 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.62 1.63.23 2.83.11 3.13.73.81 1.18 1.84 1.18 3.1 0 4.45-2.7 5.41-5.28 5.7.42.36.78 1.07.78 2.15v3.18c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>'
+      };
+
+      const buttonIcons = {
+        overview: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M10.5 3a7.5 7.5 0 1 0 4.74 13.32l4.22 4.21 1.41-1.41-4.21-4.22A7.5 7.5 0 0 0 10.5 3m0 2a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11"/></svg>',
+        detail: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.6 4.5 15.8 3l3.6 2.5v14.1L8.3 21 4 18.2V6zm3.3 3v9.4l2.5-.3v-6.3l4 6 2.1-.3V6.7l-2.5.3v6l-4-5.4z"/></svg>',
+        code: '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12c0 5.09 3.3 9.41 7.87 10.94.58.1.79-.25.79-.56v-2.15c-3.2.7-3.87-1.55-3.87-1.55-.52-1.33-1.27-1.69-1.27-1.69-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.34.95.1-.74.4-1.24.73-1.52-2.56-.3-5.25-1.28-5.25-5.72 0-1.26.45-2.29 1.18-3.1-.12-.3-.51-1.5.11-3.13 0 0 .97-.31 3.17 1.19a11 11 0 0 1 5.78 0c2.2-1.5 3.17-1.19 3.17-1.19.62 1.63.23 2.83.11 3.13.73.81 1.18 1.84 1.18 3.1 0 4.45-2.7 5.41-5.28 5.7.42.36.78 1.07.78 2.15v3.18c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5"/></svg>'
+      };
+
+      const els = {
+        badge: document.getElementById("profile-badge"),
+        name: document.getElementById("profile-name"),
+        intro: document.getElementById("profile-intro"),
+        topLinks: document.getElementById("top-links"),
+        interests: document.getElementById("interest-list"),
+        techStack: document.getElementById("tech-stack-list"),
+        projects: document.getElementById("project-list"),
+        emailText: document.getElementById("email-text"),
+        copyBtn: document.getElementById("copy-email-btn"),
+        scholarModal: document.getElementById("scholar-modal"),
+        scholarModalClose: document.getElementById("scholar-modal-close"),
+        publicationList: document.getElementById("publication-list"),
+        overviewModal: document.getElementById("overview-modal"),
+        overviewModalClose: document.getElementById("overview-modal-close"),
+        overviewModalTitle: document.getElementById("overview-modal-title"),
+        overviewModalImage: document.getElementById("overview-modal-image")
+      };
+
+      const fetchJson = async (path) => {
+        const response = await fetch(path);
+        if (!response.ok) throw new Error(`Failed to load ${path}`);
+        return response.json();
+      };
+
+      const renderLinks = (links) => {
+        els.topLinks.innerHTML = links.map((link) => `
+          <a class="card link-card" href="${link.url}" ${link.id === "publications" ? 'id="scholar-link"' : ""} target="_blank" rel="noreferrer noopener">
+            <div class="link-head">
+              ${iconMap[link.id] || ""}
+              <div class="link-label">${link.label}</div>
+            </div>
+            <div class="link-desc">${link.description}</div>
+          </a>
+        `).join("");
+      };
+
+      const renderInterests = (interests) => {
+        els.interests.innerHTML = interests.map((item) => `<span class="soft-chip">${item}</span>`).join("");
+      };
+
+      const renderTechStack = (rows) => {
+        const splitIntoChunks = (items, size) => {
+          const chunks = [];
+          for (let i = 0; i < items.length; i += size) {
+            chunks.push(items.slice(i, i + size));
+          }
+          return chunks;
+        };
+
+        els.techStack.innerHTML = rows
+          .map((row, index) => {
+            // Keep the 3rd stack color, but render it as 2/2 lines for readability.
+            if (index === 2 && row.length >= 4) {
+              return splitIntoChunks(row, 2)
+                .map((chunk) => `
+                  <div class="chip-row stack-row-3">
+                    ${chunk.map((item) => `<span class="soft-chip">${item}</span>`).join("")}
+                  </div>
+                `)
+                .join("");
+            }
+
+            return `
+              <div class="chip-row stack-row-${index + 1}">
+                ${row.map((item) => `<span class="soft-chip">${item}</span>`).join("")}
+              </div>
+            `;
+          })
+          .join("");
+      };
+
+      const renderProjects = (projects) => {
+        els.projects.innerHTML = projects.map((project) => `
+          <article class="card project">
+            <h3>${project.title}</h3>
+            <div class="keywords">${project.keywords.map((keyword) => `<span class="chip">${keyword}</span>`).join("")}</div>
+            <p>${project.summary}</p>
+            <div class="actions">
+              <button class="btn overview" type="button" data-overview-title="${project.overviewTitle}" data-overview-image="${project.overviewImage}">
+                ${buttonIcons.overview}<span>Overview</span>
+              </button>
+              <a class="btn detail" href="${project.detailUrl}" target="_blank" rel="noreferrer noopener">
+                ${buttonIcons.detail}<span>Details</span>
+              </a>
+              <a class="btn code" href="${project.codeUrl}" target="_blank" rel="noreferrer noopener">
+                ${buttonIcons.code}<span>Codes</span>
+              </a>
+            </div>
+          </article>
+        `).join("");
+      };
+
+      const renderPublications = (publications) => {
+        const renderGroup = (title, items) => `
+          <section class="pub-group">
+            <h4 class="pub-group-title">${title}</h4>
+            <ol class="pub-list">
+              ${items
+                .map((item) => {
+                  return `
+                    <li>
+                      <a href="${item.url || "#"}" target="_blank" rel="noreferrer noopener">
+                        <span class="pub-item-title">${item.titleLine || ""}</span>
+                        <span class="pub-item-detail">
+                          <span>${item.authors || ""}</span>${item.metaLine ? ` <span class="pub-item-meta">${item.metaLine}</span>` : ""}
+                        </span>
+                      </a>
+                    </li>
+                  `;
+                })
+                .join("")}
+            </ol>
+          </section>
+        `;
+        els.publicationList.innerHTML = `${renderGroup("Journal", publications.journal || [])}${renderGroup("Conference", publications.conference || [])}`;
+      };
+
+      const openModal = (modal) => {
+        modal?.classList.add("open");
+        modal?.setAttribute("aria-hidden", "false");
+      };
+
+      const closeModal = (modal) => {
+        modal?.classList.remove("open");
+        modal?.setAttribute("aria-hidden", "true");
+      };
+
+      const initCopy = () => {
+        els.copyBtn?.addEventListener("click", async () => {
+          const emailText = els.emailText?.textContent?.trim() || "";
+          if (!emailText) return;
+          try {
+            await navigator.clipboard.writeText(emailText);
+          } catch {
+            const temp = document.createElement("input");
+            temp.value = emailText;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            temp.remove();
+          }
+          const originalTitle = els.copyBtn.title;
+          els.copyBtn.title = "Copied";
+          els.copyBtn.setAttribute("aria-label", "Copied");
+          setTimeout(() => {
+            els.copyBtn.title = originalTitle;
+            els.copyBtn.setAttribute("aria-label", "Copy email");
+          }, 1200);
+        });
+      };
+
+      const initModalEvents = () => {
+        document.getElementById("scholar-link")?.addEventListener("click", (event) => {
+          event.preventDefault();
+          openModal(els.scholarModal);
+        });
+
+        els.scholarModalClose?.addEventListener("click", () => closeModal(els.scholarModal));
+        els.overviewModalClose?.addEventListener("click", () => closeModal(els.overviewModal));
+
+        document.querySelectorAll(".btn.overview").forEach((button) => {
+          button.addEventListener("click", () => {
+            els.overviewModalTitle.textContent = button.getAttribute("data-overview-title") || "Project Overview";
+            els.overviewModalImage.src = button.getAttribute("data-overview-image") || "";
+            els.overviewModalImage.alt = `${els.overviewModalTitle.textContent} overview image`;
+            openModal(els.overviewModal);
+          });
+        });
+
+        els.scholarModal?.addEventListener("click", (event) => {
+          if (event.target === els.scholarModal) closeModal(els.scholarModal);
+        });
+
+        els.overviewModal?.addEventListener("click", (event) => {
+          if (event.target === els.overviewModal) closeModal(els.overviewModal);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeModal(els.scholarModal);
+            closeModal(els.overviewModal);
+          }
+        });
+      };
+
+      (async () => {
+        try {
+          const [profile, research, projects, publications] = await Promise.all([
+            fetchJson("assets/data/profile.json"),
+            fetchJson("assets/data/research.json"),
+            fetchJson("assets/data/projects.json"),
+            fetchJson("assets/data/publications.json")
+          ]);
+
+          document.title = profile.pageTitle || document.title;
+          els.badge.textContent = profile.badge || "";
+          els.name.textContent = profile.name || "";
+          els.intro.textContent = profile.intro || "";
+          els.emailText.textContent = profile.contactEmail || "";
+
+          renderLinks(profile.links || []);
+          renderInterests(research.interests || []);
+          renderTechStack(research.techStackRows || []);
+          renderProjects(projects || []);
+          renderPublications(publications || {});
+
+          initCopy();
+          initModalEvents();
+        } catch (error) {
+          console.error(error);
+        }
+      })();
+    </script>
+  </body>
+</html>

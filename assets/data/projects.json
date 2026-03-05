@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Discriminative Embedding Learning via VAPL",
+    "keywords": ["Representation Learning", "Semantic Segmentation"],
+    "summary": "Tackled intra-class variation and class boundary ambiguity in segmentation by designing variation-aware proxy learning with a factorized similarity score and a focal-modulated compositional loss, delivering performance gains at no inference-time cost.",
+    "overviewTitle": "Discriminative Embedding Learning via VAPL",
+    "overviewImage": "assets/overview-latent-learning.svg",
+    "detailUrl": "https://www.notion.so/Project-Discriminative-Embedding-Learning-via-VAPL-319188b25aca806c8fe8e1c2791aab49?source=copy_link",
+    "codeUrl": "https://github.com/saha3jet"
+  },
+  {
+    "title": "Real-time LWIR Segmentation for Firefighter Navigation",
+    "keywords": ["LWIR Imagery", "Real-time Segmentation", "Data Augmentation", "Auto-labeling"],
+    "summary": "A comprehensive real-time segmentation pipeline featuring a custom thermal dataset built through synthesis and automated labeling to ensure high-precision detection in obscured and noisy environments.",
+    "overviewTitle": "Real-time LWIR Segmentation for Firefighter Navigation",
+    "overviewImage": "assets/overview-pathfinder.svg",
+    "detailUrl": "https://www.notion.so/Project-Real-time-LWIR-Segmentation-for-Firefighter-Navigation-319188b25aca808f9638fba1343d8d81?source=copy_link",
+    "codeUrl": "https://github.com/saha3jet/pytorch_efficientirseg.git"
+  },
+  {
+    "title": "FiYS: Multimodal Shoes Search via Context Optimization",
+    "keywords": ["Vision-Language Model", "Context Optimization"],
+    "summary": "A multimodal search engine identifying specific shoe features by combining image and text queries via learnable Context Optimization (CoOp), achieving over 93% retrieval accuracy.",
+    "overviewTitle": "FiYS: Multimodal Shoes Search via Context Optimization",
+    "overviewImage": "assets/overview-find-your-shoes.svg",
+    "detailUrl": "https://occipital-camel-89a.notion.site/Haejun-Bae-AI-researcher-Computer-Vision-2d8188b25aca80988daaf3fdc88a2335",
+    "codeUrl": "https://github.com/saha3jet/FindYourShoes_with_CLIP.git"
+  }
+]

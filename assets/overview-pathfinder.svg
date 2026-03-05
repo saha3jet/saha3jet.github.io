@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#effcf8"/>
+      <stop offset="100%" stop-color="#d8f4eb"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="900" fill="url(#bg2)"/>
+  <rect x="70" y="70" width="1260" height="760" rx="24" fill="#ffffff" stroke="#c4eadf"/>
+  <text x="120" y="160" font-size="44" font-family="Pretendard, Arial, sans-serif" fill="#0f5b4d" font-weight="700">Pathfinder AI for Firefighters</text>
+  <text x="120" y="220" font-size="24" font-family="Pretendard, Arial, sans-serif" fill="#2f7b6d">Overview Snapshot</text>
+  <rect x="120" y="280" width="370" height="410" rx="14" fill="#f3fdf9" stroke="#cdece2"/>
+  <text x="145" y="330" font-size="22" font-family="Pretendard, Arial, sans-serif" fill="#1e695c">Input</text>
+  <text x="145" y="380" font-size="18" font-family="Pretendard, Arial, sans-serif" fill="#4a8e82">LWIR Frames</text>
+  <rect x="515" y="280" width="370" height="410" rx="14" fill="#f3fdf9" stroke="#cdece2"/>
+  <text x="540" y="330" font-size="22" font-family="Pretendard, Arial, sans-serif" fill="#1e695c">Model</text>
+  <text x="540" y="380" font-size="18" font-family="Pretendard, Arial, sans-serif" fill="#4a8e82">Adaptive denoise + segmentation</text>
+  <rect x="910" y="280" width="360" height="410" rx="14" fill="#f3fdf9" stroke="#cdece2"/>
+  <text x="935" y="330" font-size="22" font-family="Pretendard, Arial, sans-serif" fill="#1e695c">Output</text>
+  <text x="935" y="380" font-size="18" font-family="Pretendard, Arial, sans-serif" fill="#4a8e82">Navigation-support mask map</text>
+</svg>

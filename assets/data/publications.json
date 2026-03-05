@@ -1,0 +1,30 @@
+{
+  "journal": [
+    {
+      "titleLine": "Variation-aware proxy learning for semantic segmentation",
+      "metaLine": "Neurocomputing (2025)",
+      "authors": "H. Bae and BC Song",
+      "url": "https://doi.org/10.1016/j.neucom.2025.131783"
+    },
+    {
+      "titleLine": "Real-Time Long-Wave Infrared Image Segmentation with Adaptive Noise Reduction and Feature Fusion",
+      "metaLine": "IEEE Access (2025)",
+      "authors": "H. Bae et al.",
+      "url": "https://doi.org/10.1109/ACCESS.2025.3552782"
+    },
+    {
+      "titleLine": "Improving Boundary Prediction in Image Segmentation Algorithms using a Loss Function with Distance-based Weighting",
+      "metaLine": "Journal of the Institute of Electronics and Information Engineers (2025)",
+      "authors": "H. Bae and BC Song",
+      "url": "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12055101"
+    }
+  ],
+  "conference": [
+    {
+      "titleLine": "Optimizing Real-Time NIR Image Segmentation: Enhancing Accuracy Through Bilateral Fusion for False Negative Mitigation",
+      "metaLine": "International Conference on Electronics, Information, and Communication (2024)",
+      "authors": "H. Bae et al.",
+      "url": "https://doi.org/10.1109/ICEIC61013.2024.10457215"
+    }
+  ]
+}

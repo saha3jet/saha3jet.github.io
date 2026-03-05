@@ -1,0 +1,15 @@
+{
+  "interests": [
+    "Artificial Intelligence",
+    "Semantic Segmentation",
+    "Image Generation",
+    "Object Detection",
+    "Representative Learning",
+    "Computer Vision"
+  ],
+  "techStackRows": [
+    ["PyTorch", "OpenCV", "Numpy", "DDP", "W&B"],
+    ["GitHub", "Huggingface", "Docker", "Linux"],
+    ["Experimental Design", "Dataset Curation & Pipelines", "Reproductivity", "Evaluation & Diagnostics"]
+  ]
+}
