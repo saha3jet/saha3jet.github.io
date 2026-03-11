@@ -1,15 +1,15 @@
 {
   "interests": [
-    "Artificial Intelligence",
-    "Semantic Segmentation",
-    "Image Generation",
-    "Object Detection",
+    "Robust Vision",
+    "Efficient Vision Systems",
     "Representative Learning",
-    "Computer Vision"
+    "Semantic Segmentation",
+    "Object Detection",
+    "Image Generation"
   ],
   "techStackRows": [
-    ["PyTorch", "OpenCV", "Numpy", "DDP", "W&B"],
+    ["PyTorch", "OpenCV", "Numpy", "Matplotlib", "Weights & Biases"],
     ["GitHub", "Huggingface", "Docker", "Linux"],
-    ["Experimental Design", "Dataset Curation & Pipelines", "Reproductivity", "Evaluation & Diagnostics"]
+    ["Experimental Design", "Dataset Curation & Pipelines", "Evaluation & Diagnostics", "Reproductivity"]
   ]
 }
