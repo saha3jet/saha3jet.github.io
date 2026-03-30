@@ -311,6 +311,10 @@
         line-height: 1.1;
       }
 
+      .actions[data-count="2"] .btn {
+        flex: 0 0 calc((100% - 4px) / 2);
+      }
+
       .btn svg {
         width: 15px;
         height: 15px;
@@ -581,8 +585,8 @@
     <div class="modal-backdrop" id="summary-modal" aria-hidden="true">
       <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="summary-modal-title">
         <div class="modal-header">
-          <h3 class="modal-title" id="summary-modal-title">Project Summary</h3>
-          <button class="modal-close" type="button" id="summary-modal-close" aria-label="Close project summary">X</button>
+          <h3 class="modal-title" id="summary-modal-title">Project Overview</h3>
+          <button class="modal-close" type="button" id="summary-modal-close" aria-label="Close project overview">X</button>
         </div>
         <div class="modal-body">
           <p id="summary-modal-text"></p>
@@ -685,21 +689,41 @@
             .replaceAll("<", "&lt;")
             .replaceAll(">", "&gt;");
 
+        const renderAction = (project, action) => {
+          if (action === "overview") {
+            return `
+              <button class="btn summary" type="button" data-summary-title="${escAttr(project.title)}" data-summary-text="${escAttr(project.brief || project.summary)}">
+                ${buttonIcons.summary}<span>Overview</span>
+              </button>
+            `;
+          }
+
+          if (action === "details" && project.detailUrl) {
+            return `
+              <a class="btn detail" href="${project.detailUrl}" target="_blank" rel="noreferrer noopener">
+                ${buttonIcons.detail}<span>Details</span>
+              </a>
+            `;
+          }
+
+          if (action === "codes" && project.codeUrl) {
+            return `
+              <a class="btn code" href="${project.codeUrl}" target="_blank" rel="noreferrer noopener">
+                ${buttonIcons.code}<span>Codes</span>
+              </a>
+            `;
+          }
+
+          return "";
+        };
+
         els.projects.innerHTML = projects.map((project) => `
           <article class="card project project-slide">
             <h3>${project.title}</h3>
             <div class="keywords">${project.keywords.map((keyword) => `<span class="chip">${keyword}</span>`).join("")}</div>
             <p>${project.summary}</p>
-            <div class="actions">
-              <button class="btn summary" type="button" data-summary-title="${escAttr(project.title)}" data-summary-text="${escAttr(project.brief || project.summary)}">
-                ${buttonIcons.summary}<span>Summary</span>
-              </button>
-              <a class="btn detail" href="${project.detailUrl}" target="_blank" rel="noreferrer noopener">
-                ${buttonIcons.detail}<span>Details</span>
-              </a>
-              <a class="btn code" href="${project.codeUrl}" target="_blank" rel="noreferrer noopener">
-                ${buttonIcons.code}<span>Codes</span>
-              </a>
+            <div class="actions" data-count="${(project.actions || ["overview", "details", "codes"]).length}">
+              ${(project.actions || ["overview", "details", "codes"]).map((action) => renderAction(project, action)).join("")}
             </div>
           </article>
         `).join("");
@@ -795,7 +819,7 @@
 
         document.querySelectorAll(".btn.summary").forEach((button) => {
           button.addEventListener("click", () => {
-            els.summaryModalTitle.textContent = button.getAttribute("data-summary-title") || "Project Summary";
+            els.summaryModalTitle.textContent = button.getAttribute("data-summary-title") || "Project Overview";
             els.summaryModalText.textContent = button.getAttribute("data-summary-text") || "";
             openModal(els.summaryModal);
           });
