@@ -628,8 +628,11 @@
         projectNext: document.getElementById("project-next")
       };
 
+      const assetVersion = "16a699b";
+
       const fetchJson = async (path) => {
-        const response = await fetch(path);
+        const separator = path.includes("?") ? "&" : "?";
+        const response = await fetch(`${path}${separator}v=${assetVersion}`);
         if (!response.ok) throw new Error(`Failed to load ${path}`);
         return response.json();
       };
