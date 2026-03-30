@@ -201,13 +201,14 @@
       }
 
       .project-carousel {
+        position: relative;
         margin-top: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
       }
 
       .carousel-btn {
+        position: absolute;
+        top: 50%;
+        z-index: 2;
         width: 34px;
         height: 34px;
         border-radius: 50%;
@@ -220,6 +221,15 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        transform: translateY(-50%);
+      }
+
+      #project-prev {
+        left: -52px;
+      }
+
+      #project-next {
+        right: -52px;
       }
 
       .carousel-btn:disabled {
@@ -297,18 +307,20 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
         flex: 0 0 calc((100% - 8px) / 3);
-        gap: 5px;
+        gap: 3px;
         text-decoration: none;
         font-size: 0.82rem;
         font-weight: 650;
-        padding: 9px 8px;
-        min-height: 46px;
+        padding: 8px 6px;
+        min-height: 54px;
         border-radius: 9px;
         border: 1px solid transparent;
         white-space: nowrap;
         min-width: 0;
         line-height: 1.1;
+        overflow: hidden;
       }
 
       .actions[data-count="2"] .btn {
@@ -319,6 +331,12 @@
         width: 15px;
         height: 15px;
         flex-shrink: 0;
+      }
+
+      .btn span {
+        min-width: 0;
+        text-align: center;
+        white-space: nowrap;
       }
 
       .btn.detail {
@@ -430,6 +448,11 @@
         padding: 14px 18px 18px;
       }
 
+      #summary-modal-text {
+        margin: 0;
+        white-space: pre-line;
+      }
+
       .pub-list {
         margin: 0;
         padding-left: 0;
@@ -515,17 +538,25 @@
         .btn {
           font-size: 0.76rem;
           padding: 8px 6px;
-          gap: 4px;
-          min-height: 40px;
+          gap: 2px;
+          min-height: 48px;
         }
 
         .project-carousel {
-          gap: 8px;
+          padding: 0 8px;
         }
 
         .carousel-btn {
           width: 30px;
           height: 30px;
+        }
+
+        #project-prev {
+          left: -8px;
+        }
+
+        #project-next {
+          right: -8px;
         }
       }
     </style>
@@ -628,7 +659,7 @@
         projectNext: document.getElementById("project-next")
       };
 
-      const assetVersion = "16a699b";
+      const assetVersion = "local-dev";
 
       const fetchJson = async (path) => {
         const separator = path.includes("?") ? "&" : "?";
@@ -695,7 +726,7 @@
         const renderAction = (project, action) => {
           if (action === "overview") {
             return `
-              <button class="btn summary" type="button" data-summary-title="${escAttr(project.title)}" data-summary-text="${escAttr(project.brief || project.summary)}">
+              <button class="btn summary" type="button" data-summary-title="${escAttr(project.title)}" data-summary-text="${escAttr(project.overview || project.brief || project.summary)}">
                 ${buttonIcons.summary}<span>Overview</span>
               </button>
             `;

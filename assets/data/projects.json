@@ -2,26 +2,29 @@
   {
     "title": "Embedding Learning for Fine-grained Segmentation",
     "keywords": ["Representation Learning", "Semantic Segmentation"],
-    "summary": "Tackled intra-class variation and class boundary ambiguity in segmentation by designing variation-aware proxy learning with a factorized similarity score and a focal-modulated compositional loss, delivering performance gains at no inference-time cost.",
+    "summary": "Designed variation-aware proxy learning to improve fine-grained segmentation boundaries with no extra inference cost.",
     "brief": "Model-agnostic embedding factorization with variation-aware proxies for fine-grained segmentation.",
+    "overview": "[Members] 1\n\n[Period] Mar 2025 - Aug 2025\n\n[Method Design]\nAnalyzed the limitations of single-proxy representations and designed a factorized similarity computation combining a representative proxy and a variation vector, with Attraction/Repulsion losses - improving boundary quality at no additional parameter or inference cost.\n\n[Experiments & Results]\nValidated consistent mIoU gains across 6 backbones (SegNeXt, HRNet, etc.) and 4 datasets (Cityscapes, COCO-Stuff, iSAID, etc.), including MobileNetV3+Cityscapes 69.5->72.3. Published results in a journal paper.",
     "detailUrl": "https://www.notion.so/Project-Embedding-Learning-for-fine-grained-segmentation-32e188b25aca8092a067e2d832320c06?source=copy_link",
     "codeUrl": "https://github.com/saha3jet",
     "actions": ["overview", "details"]
   },
   {
     "title": "Real-time LWIR Segmentation for Firefighter Navigation",
-    "keywords": ["Real-time Segmentation", "Domain Adaptation", "Data Augmentation"],
-    "summary": "Led dataset construction, I2I-based thermal style augmentation, and the design of a noise-robust real-time segmentation framework with denoising, boundary enhancement, and multi-scale feature fusion for firefighter navigation in low-visibility environments.",
+    "keywords": ["Real-time Perception", "Domain Adaptation", "Image Generation"],
+    "summary": "Built a noise-robust real-time LWIR segmentation framework for firefighter navigation in low-visibility environments.",
     "brief": "Noise-robust real-time LWIR segmentation for firefighter navigation with thermal style augmentation.",
+    "overview": "[Members] 2\n\n[Period] Mar 2023 - Feb 2025\n\n[Dataset Construction]\nPersonally established QC criteria and labeling rules for collected data, and led repeated review cycles to reduce label quality variance.\n\n[Data Diversity]\nDesigned and applied I2I-based IR style augmentation to reduce location bias, identified its structural limitations firsthand, and proposed the direction for transitioning to diffusion-based methods.\n\n[Framework Design]\nIndependently designed SDM (noise suppression), BEM (boundary enhancement), and MSFM (local-global feature fusion) to address thermal noise instability.\n\n[Results]\nOutperformed FTNet on KERInha (mIoU 67.21) and SODA (mIoU 63.81). Published in a journal paper and recognized with an external award.",
     "detailUrl": "https://www.notion.so/Project-Real-time-LWIR-Segmentation-for-Firefighter-Navigation-319188b25aca808f9638fba1343d8d81?source=copy_link",
     "codeUrl": "https://github.com/saha3jet/ELSNet-Efficient-LWIR-Segmentation-Network",
     "actions": ["overview", "details", "codes"]
   },
   {
     "title": "Building an Auto-Labeling Pipeline for Semantic Segmentation",
-    "keywords": ["Auto-labeling", "Pipeline Design", "SAM"],
-    "summary": "Built a text-prompt-based automated labeling pipeline for LWIR images using Grounding DINO and SAM, extended with class-wise inference, instance refinement, and stagewise failure handling to generate training-ready semantic label maps for 1,820 images with minimal manual correction.",
+    "keywords": ["Auto-labeling", "Pipeline Design"],
+    "summary": "Built a three-stage auto-labeling pipeline that generated training-ready semantic labels for LWIR images.",
     "brief": "Text-prompt-based auto-labeling pipeline for LWIR semantic segmentation using Grounding DINO and SAM.",
+    "overview": "[Members] 1\n\n[Period] Apr 2023 - Jun 2023\n\n[Pipeline Design]\nUsing Grounding DINO and SAM as the baseline, restructured the workflow into a three-stage pipeline: class-wise detection -> instance refinement -> semantic label map construction. Applied text-prompt-based class definition for consistency, and built retry/exception-handling loops at each stage.\n\n[Instance Refinement]\nIncorporated class-specific priors (door: vertical structure, floor: lower-connected wide region) to improve mask quality.\n\n[Results]\nGenerated label maps for 1,820 LWIR images, with the pipeline designed for reuse on newly collected data.",
     "detailUrl": "https://www.notion.so/Project-Autolabeling-LWIR-images-324188b25aca80ffa8d7ed9de23fa71c?source=copy_link",
     "codeUrl": "https://github.com/saha3jet",
     "actions": ["overview", "details"]
@@ -29,7 +32,7 @@
   {
     "title": "FiYS: Multimodal Shoes Search via Context Optimization",
     "keywords": ["Vision-Language Model", "Context Optimization"],
-    "summary": "A multimodal search engine identifying specific shoe features by combining image and text queries via learnable Context Optimization (CoOp), achieving over 93% retrieval accuracy.",
+    "summary": "Developed a CoOp-based multimodal shoe retrieval system that combines image and text queries for accurate search.",
     "brief": "Multimodal retrieval with CoOp-based context tuning for accurate shoe search.",
     "detailUrl": "https://occipital-camel-89a.notion.site/Haejun-Bae-AI-researcher-Computer-Vision-2d8188b25aca80988daaf3fdc88a2335",
     "codeUrl": "https://github.com/saha3jet/FindYourShoes_with_CLIP.git",
