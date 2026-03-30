@@ -3,13 +3,15 @@
     "title": "Discriminative Embedding Learning via VAPL",
     "keywords": ["Representation Learning", "Semantic Segmentation"],
     "summary": "Tackled intra-class variation and class boundary ambiguity in segmentation by designing variation-aware proxy learning with a factorized similarity score and a focal-modulated compositional loss, delivering performance gains at no inference-time cost.",
-    "detailUrl": "https://www.notion.so/Project-Discriminative-Embedding-Learning-via-VAPL-319188b25aca806c8fe8e1c2791aab49?source=copy_link",
+    "brief": "Model-agnostic embedding factorization with variation-aware proxies for fine-grained segmentation.",
+    "detailUrl": "https://www.notion.so/Project-Embedding-Learning-for-fine-grained-segmentation-32e188b25aca8092a067e2d832320c06?source=copy_link",
     "codeUrl": "https://github.com/saha3jet"
   },
   {
     "title": "Real-time LWIR Segmentation for Firefighter Navigation",
     "keywords": ["LWIR Imagery", "Real-time Segmentation", "Data Augmentation", "Auto-labeling"],
     "summary": "Led the design, training, and validation of a real-time LWIR segmentation framework, with contributions to thermal data curation, early image-to-image augmentation studies, and auto-labeling workflows.",
+    "brief": "Real-time LWIR pipeline for robust segmentation in obscured environments with thermal data workflows.",
     "detailUrl": "https://www.notion.so/Project-Real-time-LWIR-Segmentation-for-Firefighter-Navigation-319188b25aca808f9638fba1343d8d81?source=copy_link",
     "codeUrl": "https://github.com/saha3jet/ELSNet-Efficient-LWIR-Segmentation-Network"
   },
@@ -17,7 +19,16 @@
     "title": "FiYS: Multimodal Shoes Search via Context Optimization",
     "keywords": ["Vision-Language Model", "Context Optimization"],
     "summary": "A multimodal search engine identifying specific shoe features by combining image and text queries via learnable Context Optimization (CoOp), achieving over 93% retrieval accuracy.",
+    "brief": "Multimodal retrieval with CoOp-based context tuning for accurate shoe search.",
     "detailUrl": "https://occipital-camel-89a.notion.site/Haejun-Bae-AI-researcher-Computer-Vision-2d8188b25aca80988daaf3fdc88a2335",
     "codeUrl": "https://github.com/saha3jet/FindYourShoes_with_CLIP.git"
+  },
+  {
+    "title": "Autolabeling LWIR Images",
+    "keywords": ["Autolabeling", "LWIR", "Data Pipeline"],
+    "summary": "Designed an auto-labeling workflow for LWIR image datasets to accelerate annotation throughput and improve training data consistency.",
+    "brief": "Auto-labeling workflow for efficient and consistent LWIR dataset construction.",
+    "detailUrl": "https://www.notion.so/Project-Autolabeling-LWIR-images-324188b25aca80ffa8d7ed9de23fa71c?source=copy_link",
+    "codeUrl": "https://github.com/saha3jet"
   }
 ]

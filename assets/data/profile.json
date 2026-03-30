@@ -2,14 +2,14 @@
   "pageTitle": "Haejun Bae | AI Researcher",
   "badge": "AI RESEARCHER",
   "name": "Haejun Bae",
-  "intro": "Hi, I’m an AI researcher working on computer vision and visual AI.\nMy work is centered on robust and efficient visual AI, with a strong interest in deployment-aware systems and generative approaches.\nThis page offers a brief overview of my background.",
+  "intro": "Hi, I’m an AI researcher working on computer vision and visual AI.\nMy work is centered on robust and efficient visual AI, \nwith a strong interest in deployment-aware systems and generative approaches.\nThis page offers a brief overview of my research background.",
   "contactEmail": "baersthird13@gmail.com",
   "links": [
     {
       "id": "notion",
       "label": "Notion",
       "description": "Profile & background",
-      "url": "https://occipital-camel-89a.notion.site/Haejun-Bae-AI-researcher-Computer-Vision-2d8188b25aca80988daaf3fdc88a2335"
+      "url": "https://occipital-camel-89a.notion.site/Haejun-Bae-AI-researcher-2d8188b25aca80988daaf3fdc88a2335?source=copy_link"
     },
     {
       "id": "linkedin",
