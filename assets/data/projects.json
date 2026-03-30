@@ -32,7 +32,7 @@
   {
     "title": "FiYS: Multimodal Shoes Search via Context Optimization",
     "keywords": ["Vision-Language Model", "Context Optimization", "Multimodal"],
-    "summary": "Developed a CoOp-based multimodal shoe retrieval system that combines image and text queries for accurate search.",
+    "summary": "Defined data quality criteria and finalized the prompt learning configuration for a CLIP-based multimodal shoe recommendation system combining image and text-based attribute conditions.",
     "brief": "Multimodal retrieval with CoOp-based context tuning for accurate shoe search.",
     "overview": "[Members] 3\n\n[Period] Aug 2022 - Dec 2022\n\n[Dataset Construction]\nContributed to building a custom dataset of 6,000 shoe images spanning 7 brands and 97 models. Defined the attribute information to be stored per image and established exclusion criteria - including cropped, unidentifiable, and low-quality samples - to set the data quality standard for the project.\n\n[Model Selection]\nCompared three prompt learning configurations - CLIP baseline, CoOp, and CoCoOp - and derived the rationale for selecting CoOp as the final model, based on its stronger performance in the closed-set attribute classification setting.\n\n[Results]\nClassification accuracy improved across all attributes over the hand-crafted prompt baseline, with the largest gains observed in attributes most sensitive to prompt phrasing.",
     "detailUrl": "https://www.notion.so/Project-FiYS-Find-Your-Shoes-333188b25aca80da8d9ff1fce0ebddff?source=copy_link",
