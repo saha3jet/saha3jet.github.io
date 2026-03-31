@@ -713,8 +713,18 @@
 
         els.techStack.innerHTML = rows
           .map((row, index) => {
-            // Keep the 3rd stack color, but render it as 2/2 lines for readability.
-            if (index === 2 && row.length >= 4) {
+            // Render the 3rd stack row in two balanced lines when it grows longer.
+            if (index === 2 && row.length >= 5) {
+              return [row.slice(0, 2), row.slice(2)]
+                .map((chunk) => `
+                  <div class="chip-row stack-row-3">
+                    ${chunk.map((item) => `<span class="soft-chip">${item}</span>`).join("")}
+                  </div>
+                `)
+                .join("");
+            }
+
+            if (index === 2 && row.length === 4) {
               return splitIntoChunks(row, 2)
                 .map((chunk) => `
                   <div class="chip-row stack-row-3">
