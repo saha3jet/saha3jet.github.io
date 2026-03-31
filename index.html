@@ -678,6 +678,7 @@
       };
 
       const assetVersion = "local-dev";
+      let currentResearch = null;
 
       const fetchJson = async (path) => {
         const separator = path.includes("?") ? "&" : "?";
@@ -703,6 +704,7 @@
       };
 
       const renderTechStack = (rows) => {
+        const isMobileTechLayout = window.innerWidth <= 720;
         const splitIntoChunks = (items, size) => {
           const chunks = [];
           for (let i = 0; i < items.length; i += size) {
@@ -715,7 +717,11 @@
           .map((row, index) => {
             // Render the 3rd stack row in two balanced lines when it grows longer.
             if (index === 2 && row.length >= 5) {
-              return [row.slice(0, 2), row.slice(2)]
+              const chunks = isMobileTechLayout
+                ? [[row[0], row[3]], [row[2], row[4]], [row[1]]]
+                : [row.slice(0, 2), row.slice(2)];
+
+              return chunks
                 .map((chunk) => `
                   <div class="chip-row stack-row-3">
                     ${chunk.map((item) => `<span class="soft-chip">${item}</span>`).join("")}
@@ -919,6 +925,7 @@
         });
 
         window.addEventListener("resize", () => updateProjectCarousel());
+        window.addEventListener("resize", () => renderTechStack(currentResearch?.techStackRows || []));
       };
 
       (async () => {
@@ -938,6 +945,7 @@
 
           renderLinks(profile.links || []);
           renderInterests(research.interests || []);
+          currentResearch = research || {};
           renderTechStack(research.techStackRows || []);
           renderProjects(projects || []);
           renderPublications(publications || {});
