@@ -8,8 +8,8 @@
     "Image Generation"
   ],
   "techStackRows": [
-    ["PyTorch", "OpenCV", "Numpy", "Matplotlib", "Weights & Biases"],
-    ["GitHub", "Huggingface", "Docker", "Linux"],
-    ["Experimental Design", "Dataset Curation & Pipelines", "Evaluation & Diagnostics", "Reproductivity"]
+    ["PyTorch", "OpenCV", "CUDA", "Numpy", "Matplotlib", "W&B"],
+    ["GitHub", "Huggingface", "Docker", "Linux", "Azure"],
+    ["Experimental Design", "Dataset Curation & Pipelines", "Evaluation & Analysis", "Reproductivity", "Technical Writing"]
   ]
 }
