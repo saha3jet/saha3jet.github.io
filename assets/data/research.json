@@ -2,7 +2,7 @@
   "interests": [
     "Robust Vision",
     "Efficient Vision Systems",
-    "Representative Learning",
+    "Representation Learning",
     "Semantic Segmentation",
     "Object Detection",
     "Image Generation"
@@ -10,6 +10,6 @@
   "techStackRows": [
     ["PyTorch", "OpenCV", "CUDA", "Numpy", "W&B"],
     ["GitHub", "Huggingface", "Docker", "Linux", "Azure"],
-    ["Experimental Design", "Dataset Curation & Pipelines", "Evaluation & Analysis", "Reproductivity", "Technical Writing"]
+    ["Experimental Design", "Dataset Curation & Pipelines", "Evaluation & Analysis", "Reproducibility", "Technical Writing"]
   ]
 }

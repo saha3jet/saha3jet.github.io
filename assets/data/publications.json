@@ -26,5 +26,17 @@
       "authors": "H. Bae et al.",
       "url": "https://doi.org/10.1109/ICEIC61013.2024.10457215"
     }
+  ],
+  "patents": [
+    {
+      "titleLine": "영상 분할 대상 클래스 간 의미론적 분리를 위한 다형성 프록시 학습 기법",
+      "metaLine": "KR Patent Application 10-2025-0088670 (filed Jul 2025)",
+      "authors": ""
+    },
+    {
+      "titleLine": "영상 내 작은 객체 탐지를 위한 실시간 영상 분할 알고리즘",
+      "metaLine": "KR Patent Application 10-2024-0167320 (filed Nov 2024)",
+      "authors": ""
+    }
   ]
 }

@@ -2,7 +2,7 @@
   "pageTitle": "Haejun Bae | AI Researcher",
   "badge": "AI RESEARCHER",
   "name": "Haejun Bae",
-  "intro": "Hi, I’m an AI researcher working on computer vision and visual AI.\nMy work is centered on robust and efficient visual AI, \nwith a strong interest in deployment-aware systems and generative approaches.\nThis page offers a brief overview of my research background.",
+  "intro": "Hi, I’m an AI researcher working on computer vision and visual AI.\nReal-world problems always come with constraints - limited data, noise, and real-time requirements.\nI start by testing how far existing methods hold up under those limits to decide what to complement,\nand when validating results, I check not just score gains but why they improve and where they still fail.",
   "contactEmail": "baersthird13@gmail.com",
   "links": [
     {

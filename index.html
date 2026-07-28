@@ -824,20 +824,23 @@
       };
 
       const renderPublications = (publications) => {
-        const renderGroup = (title, items) => `
+        const renderGroup = (title, items) => {
+          if (!items.length) return "";
+          return `
           <section class="pub-group">
             <h4 class="pub-group-title">${title}</h4>
             <ol class="pub-list">
               ${items
                 .map((item) => {
-                  return `
-                    <li>
-                      <a href="${item.url || "#"}" target="_blank" rel="noreferrer noopener">
+                  const inner = `
                         <span class="pub-item-title">${item.titleLine || ""}</span>
                         <span class="pub-item-detail">
                           <span>${item.authors || ""}</span>${item.metaLine ? ` <span class="pub-item-meta">${item.metaLine}</span>` : ""}
                         </span>
-                      </a>
+                  `;
+                  return `
+                    <li>
+                      ${item.url ? `<a href="${item.url}" target="_blank" rel="noreferrer noopener">${inner}</a>` : inner}
                     </li>
                   `;
                 })
@@ -845,7 +848,8 @@
             </ol>
           </section>
         `;
-        els.publicationList.innerHTML = `${renderGroup("Journal", publications.journal || [])}${renderGroup("Conference", publications.conference || [])}`;
+        };
+        els.publicationList.innerHTML = `${renderGroup("Journal", publications.journal || [])}${renderGroup("Conference", publications.conference || [])}${renderGroup("Patents", publications.patents || [])}`;
       };
 
       const openModal = (modal) => {
